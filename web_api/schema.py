@@ -1,15 +1,15 @@
 import graphene
 from graphene_django.debug import DjangoDebug
 
+from .auth_schema import RegistrationMutation, LoginMutation
+
 
 class Query(graphene.ObjectType):
-    name = graphene.String()
     debug = graphene.Field(DjangoDebug, name='_debug')
 
-    def resolve_name(self, info, **kwargs):
-        return "Eventr"
+
+class Mutation(RegistrationMutation, LoginMutation):
+    pass
 
 
-entry_point = graphene.Schema(query=Query)
-
-
+entry_point = graphene.Schema(query=Query, mutation=Mutation)

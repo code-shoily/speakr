@@ -44,6 +44,7 @@ GRAPHENE = {
     'SCHEMA': 'web_api.schema.entry_point',
     'MIDDLEWARE': [
         'graphene_django.debug.DjangoDebugMiddleware',
+        'graphql_jwt.middleware.JSONWebTokenMiddleware',
     ],
 }
 
