@@ -36,8 +36,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'graphene_django',
-    'graphql_jwt'
+    'graphql_jwt',
+    'web_api'
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'web_api.schema.entry_point',
+    'MIDDLEWARE': [
+        'graphene_django.debug.DjangoDebugMiddleware',
+    ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
