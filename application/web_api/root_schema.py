@@ -1,7 +1,6 @@
 import graphene
-from django.contrib.auth import get_user_model
 
-from web_api.auth_schema import UserType
+from .auth_schema import UserType
 
 
 class RootType(graphene.ObjectType):
