@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'web_api',
     'common',
+    'organization',
 ]
 
 GRAPHENE = {
