@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'graphene_django',
     'graphql_jwt',
-    'corsheaders'
+    'corsheaders',
+    'web_api',
 ]
 
 GRAPHENE = {
-    'SCHEMA': 'application.web_api.schema.entry_point',
+    'SCHEMA': 'web_api.schema.entry_point',
     'MIDDLEWARE': [
         'graphene_django.debug.DjangoDebugMiddleware',
         'graphql_jwt.middleware.JSONWebTokenMiddleware',
