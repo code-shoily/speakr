@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'graphql_jwt',
     'corsheaders',
     'web_api',
+    'common',
 ]
 
 GRAPHENE = {
