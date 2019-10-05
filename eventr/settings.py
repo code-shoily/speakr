@@ -92,8 +92,11 @@ WSGI_APPLICATION = 'eventr.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'eventr_db',
-        'USER': 'postgres',
+        'HOST': os.getenv('DB_HOST') or 'localhost',
+        'PORT': os.getenv('DB_PORT') or 5432,
+        'NAME': os.getenv('DB_NAME') or 'eventr_db',
+        'USER': os.getenv('DB_USER') or 'postgres',
+        'PASSWORD': os.getenv('DB_PASSWORD') or '',
     }
 }
 
