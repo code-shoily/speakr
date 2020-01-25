@@ -16,6 +16,14 @@ defmodule EventrWeb do
   below. Instead, define any helper function in modules
   and import those modules here.
   """
+  def mailer_view do
+    quote do
+      use Phoenix.View, root: "lib/eventr_web/templates",
+                        namespace: EventrWeb
+
+      use Phoenix.HTML
+    end
+  end
 
   def controller do
     quote do

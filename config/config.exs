@@ -14,7 +14,10 @@ config :eventr,
 config :eventr, :pow,
   user: Eventr.Auth.User,
   repo: Eventr.Repo,
-  web_module: EventrWeb
+  web_module: EventrWeb,
+  extensions: [PowResetPassword, PowEmailConfirmation],
+  mailer_backend: EventrWeb.PowMailer,
+  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks
 
 # Configures the endpoint
 config :eventr, EventrWeb.Endpoint,

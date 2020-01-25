@@ -10,6 +10,20 @@
   </head>
   <body>
     <header>
+<div class="row">
+  <div class="col-sm-12">
+    <%
+    info = get_flash(@conn, :info)
+    error = get_flash(@conn, :error)
+    %>
+    <%= if info do %>
+      <div class="alert alert-info" role="alert"><%= info %></div>
+    <% end %>
+    <%= if error do %>
+      <div class="alert alert-danger" role="alert"><%= error %></div>
+    <% end %>
+  </div>
+</div>
     </header>
     <section class="section">
       <div class="container">

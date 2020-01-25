@@ -1,6 +1,8 @@
 defmodule EventrWeb.Router do
   use EventrWeb, :router
   use Pow.Phoenix.Router
+  use Pow.Extension.Phoenix.Router,
+    extensions: [PowResetPassword, PowEmailConfirmation]
 
   pipeline :protected do
     plug Pow.Plug.RequireAuthenticated,
@@ -23,6 +25,7 @@ defmodule EventrWeb.Router do
     pipe_through :browser
 
     pow_routes()
+    pow_extension_routes()
   end
 
   scope "/", EventrWeb do
