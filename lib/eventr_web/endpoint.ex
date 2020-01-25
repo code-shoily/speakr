@@ -43,5 +43,12 @@ defmodule EventrWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+
+  plug Plug.Session,
+    store: :cookie,
+    key: "_eventr_key",
+    signing_salt: "secret-change-in-production"
+
+  plug Pow.Plug.Session, otp_app: :eventr
   plug EventrWeb.Router
 end

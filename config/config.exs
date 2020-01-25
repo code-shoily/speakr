@@ -11,6 +11,11 @@ config :eventr,
   ecto_repos: [Eventr.Repo],
   generators: [binary_id: true]
 
+config :eventr, :pow,
+  user: Eventr.Auth.User,
+  repo: Eventr.Repo,
+  web_module: EventrWeb
+
 # Configures the endpoint
 config :eventr, EventrWeb.Endpoint,
   url: [host: "localhost"],
