@@ -1,4 +1,4 @@
-defmodule Eventr.Application do
+defmodule Speakr.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,23 +9,23 @@ defmodule Eventr.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      Eventr.Repo,
+      Speakr.Repo,
       # Start the endpoint when the application starts
-      EventrWeb.Endpoint
-      # Starts a worker by calling: Eventr.Worker.start_link(arg)
-      # {Eventr.Worker, arg},
+      SpeakrWeb.Endpoint
+      # Starts a worker by calling: Speakr.Worker.start_link(arg)
+      # {Speakr.Worker, arg},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Eventr.Supervisor]
+    opts = [strategy: :one_for_one, name: Speakr.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    EventrWeb.Endpoint.config_change(changed, removed)
+    SpeakrWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

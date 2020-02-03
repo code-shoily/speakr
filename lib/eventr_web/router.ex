@@ -1,5 +1,5 @@
-defmodule EventrWeb.Router do
-  use EventrWeb, :router
+defmodule SpeakrWeb.Router do
+  use SpeakrWeb, :router
   use Pow.Phoenix.Router
   use Pow.Extension.Phoenix.Router,
     extensions: [PowResetPassword, PowEmailConfirmation]
@@ -28,14 +28,14 @@ defmodule EventrWeb.Router do
     pow_extension_routes()
   end
 
-  scope "/", EventrWeb do
+  scope "/", SpeakrWeb do
     pipe_through [:browser, :protected]
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", EventrWeb do
+  # scope "/api", SpeakrWeb do
   #   pipe_through :api
   # end
 end

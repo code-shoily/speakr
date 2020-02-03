@@ -1,4 +1,4 @@
-defmodule Eventr.Repo.Migrations.CreateUsers do
+defmodule Speakr.Repo.Migrations.CreateUsers do
   use Ecto.Migration
 
   def change do

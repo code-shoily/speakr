@@ -1,16 +1,16 @@
-defmodule EventrWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :eventr
+defmodule SpeakrWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :speakr
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_eventr_key",
+    key: "_speakr_key",
     signing_salt: "vvXUKowP"
   ]
 
-  socket "/socket", EventrWeb.UserSocket,
+  socket "/socket", SpeakrWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -20,7 +20,7 @@ defmodule EventrWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :eventr,
+    from: :speakr,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -46,9 +46,9 @@ defmodule EventrWeb.Endpoint do
 
   plug Plug.Session,
     store: :cookie,
-    key: "_eventr_key",
+    key: "_speakr_key",
     signing_salt: "secret-change-in-production"
 
-  plug Pow.Plug.Session, otp_app: :eventr
-  plug EventrWeb.Router
+  plug Pow.Plug.Session, otp_app: :speakr
+  plug SpeakrWeb.Router
 end

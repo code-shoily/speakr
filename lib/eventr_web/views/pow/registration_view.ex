@@ -1,3 +1,3 @@
-defmodule EventrWeb.Pow.RegistrationView do
-  use EventrWeb, :view
+defmodule SpeakrWeb.Pow.RegistrationView do
+  use SpeakrWeb, :view
 end

@@ -1,5 +1,5 @@
-defmodule EventrWeb.PageController do
-  use EventrWeb, :controller
+defmodule SpeakrWeb.PageController do
+  use SpeakrWeb, :controller
 
   def index(conn, _params) do
     render(conn, "index.html")

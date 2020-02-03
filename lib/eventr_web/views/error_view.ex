@@ -1,5 +1,5 @@
-defmodule EventrWeb.ErrorView do
-  use EventrWeb, :view
+defmodule SpeakrWeb.ErrorView do
+  use SpeakrWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

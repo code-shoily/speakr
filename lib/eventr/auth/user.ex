@@ -1,4 +1,4 @@
-defmodule Eventr.Auth.User do
+defmodule Speakr.Auth.User do
   use Ecto.Schema
   use Pow.Ecto.Schema
   use Pow.Extension.Ecto.Schema,

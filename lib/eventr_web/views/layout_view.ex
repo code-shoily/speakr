@@ -1,3 +1,3 @@
-defmodule EventrWeb.LayoutView do
-  use EventrWeb, :view
+defmodule SpeakrWeb.LayoutView do
+  use SpeakrWeb, :view
 end

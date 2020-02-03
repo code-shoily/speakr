@@ -1,3 +1,3 @@
-defmodule EventrWeb.PageViewTest do
-  use EventrWeb.ConnCase, async: true
+defmodule SpeakrWeb.PageViewTest do
+  use SpeakrWeb.ConnCase, async: true
 end

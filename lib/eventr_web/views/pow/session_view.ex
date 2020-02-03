@@ -1,3 +1,3 @@
-defmodule EventrWeb.Pow.SessionView do
-  use EventrWeb, :view
+defmodule SpeakrWeb.Pow.SessionView do
+  use SpeakrWeb, :view
 end

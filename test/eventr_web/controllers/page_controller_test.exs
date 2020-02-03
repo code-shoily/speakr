@@ -1,5 +1,5 @@
-defmodule EventrWeb.PageControllerTest do
-  use EventrWeb.ConnCase
+defmodule SpeakrWeb.PageControllerTest do
+  use SpeakrWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

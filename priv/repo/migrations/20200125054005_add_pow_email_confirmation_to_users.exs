@@ -1,4 +1,4 @@
-defmodule Eventr.Repo.Migrations.AddPowEmailConfirmationToUsers do
+defmodule Speakr.Repo.Migrations.AddPowEmailConfirmationToUsers do
   use Ecto.Migration
 
   def change do

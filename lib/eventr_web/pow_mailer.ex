@@ -1,4 +1,4 @@
-defmodule EventrWeb.PowMailer do
+defmodule SpeakrWeb.PowMailer do
   use Pow.Phoenix.Mailer
   require Logger
 

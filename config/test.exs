@@ -1,16 +1,16 @@
 use Mix.Config
 
 # Configure your database
-config :eventr, Eventr.Repo,
+config :speakr, Speakr.Repo,
   username: "postgres",
   password: "postgres",
-  database: "eventr_test",
+  database: "speakr_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :eventr, EventrWeb.Endpoint,
+config :speakr, SpeakrWeb.Endpoint,
   http: [port: 4002],
   server: false
 

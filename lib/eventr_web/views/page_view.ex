@@ -1,3 +1,3 @@
-defmodule EventrWeb.PageView do
-  use EventrWeb, :view
+defmodule SpeakrWeb.PageView do
+  use SpeakrWeb, :view
 end
