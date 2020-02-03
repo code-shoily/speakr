@@ -1,4 +1,4 @@
-# Eventr
+# Speakr
 
 To start your Phoenix server:
 

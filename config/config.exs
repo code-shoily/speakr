@@ -7,16 +7,24 @@
 # General application configuration
 use Mix.Config
 
-config :eventr,
-  ecto_repos: [Eventr.Repo],
+config :speakr,
+  ecto_repos: [Speakr.Repo],
   generators: [binary_id: true]
 
+config :speakr, :pow,
+  user: Speakr.Auth.User,
+  repo: Speakr.Repo,
+  web_module: SpeakrWeb,
+  extensions: [PowResetPassword, PowEmailConfirmation],
+  mailer_backend: SpeakrWeb.PowMailer,
+  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks
+
 # Configures the endpoint
-config :eventr, EventrWeb.Endpoint,
+config :speakr, SpeakrWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "3ZMcdBo0bze/rycj10ZamgkBzJm5KtrznbTldp1lZ8qAgvx00vKMEbL6g+aK1PPH",
-  render_errors: [view: EventrWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Eventr.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: SpeakrWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Speakr.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

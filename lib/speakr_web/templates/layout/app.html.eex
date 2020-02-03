@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Speakr · Phoenix Framework</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <%= csrf_meta_tag() %>
+  </head>
+  <body>
+    <header>
+<div class="row">
+  <div class="col-sm-12">
+    <%
+    info = get_flash(@conn, :info)
+    error = get_flash(@conn, :error)
+    %>
+    <%= if info do %>
+      <div class="alert alert-info" role="alert"><%= info %></div>
+    <% end %>
+    <%= if error do %>
+      <div class="alert alert-danger" role="alert"><%= error %></div>
+    <% end %>
+  </div>
+</div>
+    </header>
+    <section class="section">
+      <div class="container">
+        <%= render @view_module, @view_template, assigns %>
+      </div>
+    </section>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

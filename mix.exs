@@ -1,9 +1,9 @@
-defmodule Eventr.MixProject do
+defmodule Speakr.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :eventr,
+      app: :speakr,
       version: "0.1.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Eventr.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Eventr.Application, []},
+      mod: {Speakr.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -43,7 +43,8 @@ defmodule Eventr.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false},
+      {:pow, "~> 1.0.16"}
     ]
   end
 
